@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 def run_amazon():
     current_hour = datetime.now().hour
     
-    if not (15 <= current_hour < 21):
+    if not (15 <= current_hour < 18):
         print(f"TASK BLOCKED: Current time is {current_hour}:00. Required: 15:00-18:00.")
         return
 
@@ -54,7 +54,7 @@ def run_amazon():
             break
 
         if selected_element:
-            print(f"✅ MATCH FOUND: {selected_title}")
+            print(f"MATCH FOUND: {selected_title}")
             
             driver.execute_script("arguments[0].scrollIntoView();", selected_element)
             time.sleep(1)
