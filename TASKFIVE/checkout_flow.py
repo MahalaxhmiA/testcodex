@@ -50,7 +50,7 @@ def automate_full_flow():
     except Exception as e:
         print(f"Error: {e}")
     finally:
-        time.sleep(60)
+        time.sleep(5)
         driver.quit()
 
 if __name__ == "__main__":
